@@ -3,21 +3,40 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      style={{
+        backgroundColor: '#f0f0f0',
+        width: 800,
+        paddingTop: "1rem",
+        paddingBottom: "1rem",
+       }}
+      >
+      <h1 className='title'>Pokemon Search✳️</h1>
+{/* To Do Create  a table */}
+      <table width="100%">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Attack</th>
+            <th>Defense</th>
+            <th>HP</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Bulbasaur</td>
+            <td>Grass/Poison</td>
+            <td>45</td>
+            <td>49</td>
+            <td>45</td>
+
+          </tr>
+        </tbody>
+
+
+      </table>
+
     </div>
   );
 }
