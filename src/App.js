@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import pokemon from "./pokemon.json";
 
 function App() {
   return (
@@ -24,14 +25,21 @@ function App() {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Bulbasaur</td>
-            <td>Grass/Poison</td>
-            <td>45</td>
-            <td>49</td>
-            <td>45</td>
+          {
+            pokemon.slice(0,20).map(pokemon => (
+              <tr
+                key={[pokemon.id, pokemon.name.english]}
+              >
+              <td> {pokemon.name.english} </td>
+              <td> { pokemon.type.join(', ')}</td>
+              <td> {pokemon.base['Sp. Attack']} </td>
+              <td>{ pokemon.base['Sp. Defense']}</td>
+              <td>{ pokemon.base.HP}</td>
+  
+            </tr>
+            ) )
+          }
 
-          </tr>
         </tbody>
 
 
